@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ScoreRepository extends JpaRepository<Score, Integer> {
     @Query(value = """
@@ -28,4 +29,6 @@ public interface ScoreRepository extends JpaRepository<Score, Integer> {
             WHERE r.ClassName  = :roomClass AND  sub.SubjectName = :subjectName
             """,nativeQuery = true)
     List<Score> findScoreByClassAndSubject(@Param("roomClass") String name, @Param("subjectName") String subjectName);
+
+//    List<Score> findByYears_id(Integer yearId);
 }

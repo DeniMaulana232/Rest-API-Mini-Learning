@@ -1,0 +1,709 @@
+{
+	"info": {
+		"_postman_id": "bcdcf890-766f-49e9-9656-b9267e10a878",
+		"name": "Elearning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20475016"
+	},
+	"item": [
+		{
+			"name": "Materi",
+			"item": [
+				{
+					"name": "Get All Materi",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Insert New Materi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"perkenalan\",\r\n    \"description\" : \"matematika adalah pelajaran yang dibutuhkan\",\r\n    \"subjectId\" : \"A001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/materi/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"materi",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/materi/delete/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"materi",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data Materi",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"pertemuan ke 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/materi/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"materi",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClassRoom",
+			"item": [
+				{
+					"name": "Insert Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"className\"     : \"Kelas 1\",\r\n    \"teacherName\"   : \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/roomclass/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"roomclass",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Data Room Class",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/roomclass/index",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"roomclass",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/roomclass/delete/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"roomclass",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"className\" : \"Kelas 1A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/roomclass/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"roomclass",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindRoomClassById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/roomclass/index/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"roomclass",
+								"index",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Score",
+			"item": [
+				{
+					"name": "Get All Score",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Insert New Score",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"value\" : \"85\",\r\n    \"studentId\" : \"1\",\r\n    \"yearsId\"   : \"3\",\r\n    \"subjectId\" : \"A001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/score/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Student Score",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/score/index/faisal",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								"index",
+								"faisal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Score By Class And Subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/score/index/by?roomClass=Kelas 1B&subjectName=Matematika",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								"index",
+								"by"
+							],
+							"query": [
+								{
+									"key": "roomClass",
+									"value": "Kelas 1B"
+								},
+								{
+									"key": "subjectName",
+									"value": "Matematika"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Score Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/score/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"score",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get All Data Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/student/index",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert New Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Deni\",\r\n    \"lastName\"  : \"Maulana\",\r\n    \"nik\"       : \"123123\",\r\n    \"address\"   : \"Bandar Lampung\",\r\n    \"RoomClass\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/student/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Esmeralda\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/student/update/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/student/delete/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subject",
+			"item": [
+				{
+					"name": "Get All Subjct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/subject/index",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"subject",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\"            : \"A001\",\r\n    \"subjectName\"   : \"Matematika\",\r\n    \"description\"   : \"tes\",\r\n    \"teacherName\"   : \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/subject/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"subject",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/subject/delete/A001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"subject",
+								"delete",
+								"A001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/subject/update/A001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"subject",
+								"update",
+								"A001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "Get All Teacher",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nuptk\" : \"178012381231\",\r\n    \"firstName\"  : \"Mustika\",\r\n    \"lastName\" : \"Reza\",\r\n    \"email\"  : \"murel@gmail.com\",\r\n    \"address\"    : \"bandar lampung\",\r\n    \"phone\"     : \"0908924342\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/teacher/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"teacher",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Teacher By Name",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"lastName\": \". S\",\r\n    \"email\": \":Seirin.fight232@gmail.com\",\r\n    \"address\": \":bandar Lampung\",\r\n    \"phone\": \"0822282138584\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/teacher/update/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"teacher",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Teacher",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/teacher/delete/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"teacher",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "YearSchool",
+			"item": [
+				{
+					"name": "Get All School Year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/year/index",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"year",
+								"index"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Year School",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"schoolYear\"    : \"2023-03-09\",\r\n    \"semester\"      : \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/year/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"year",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/year/index/year/2021-09-09",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"year",
+								"index",
+								"year",
+								"2021-09-09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update School Year",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\": \"2022-03-09\",\r\n    \"semester\" : \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/year/update?id=4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"year",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
